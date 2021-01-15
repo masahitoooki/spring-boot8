@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	 <h3>Formクラスを利用した実装</h3>
+    <form th:action="@{/bookinfo}" method="post" th:object="${bookForm}">
+    <label>タイトル</label><br>
+    <input type="text" th:field="*{title}"><br>
+    <label>値段</label><br>
+    <input type="text" th:field="*{price}"><br>
+    <label>概要</label><br>
+    <input type="text" th:field="*{summary}"><br>
+    <button>送信</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>buttonに値を指定して、Formクラスで受け取る</h3>
+    <form th:action="@{/movieinfo}" method="post" th:object="${bookForm}">
+    <label>タイトル</label><br>
+    <input type="text" readonly th:field="*{title}"><br>
+    <label>値段</label><br>
+    <input type="text" readonly th:field="*{price}"><br>
+    <label>概要</label><br>
+    <input type="text" readonly name="summary" th:value="*{summary}"><br>
+    <button name="category" value="アクション">アクション映画として送信</button>
+    <button name="category" value="ファンタジー">ファンタジー映画として送信</button>
+    <button name="category" value="SF">SF映画として送信</button>
+    </form>
+
+</body>
+</html>

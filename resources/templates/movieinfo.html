@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>buttonに値を指定して、Formクラスで受け取る</h3>
+    <div th:object="${movieForm}">
+    <label>タイトル</label><br>
+    <span th:text="*{title}"></span><br>
+    <label>値段</label><br>
+    <span th:text="*{price}"></span><br>
+    <label>概要</label><br>
+    <span th:text="*{summary}"></span><br>
+    カテゴリーは<span th:text="*{category}"></span>です。
+    </div>
+</body>
+</html>
